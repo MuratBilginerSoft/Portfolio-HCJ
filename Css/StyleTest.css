@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    background-color: #21283a;
+    overflow-x: hidden;
+
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    width: 500px;
+    height: 500px;
+    background: #1de5ff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #1de5ff,
+    0 0 50px #1de5ff,
+    0 0 150px #1de5ff;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+
+}
+
+section.active::before{
+    background: #21283a;
+    box-shadow: 0 0 0 1900px #141821;
+    
+}   
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 45px;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header span{
+    color: #3b6ce7;
+}
+
+.toggle{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url("../Assets/Images/menu.png");
+    transition: all 0.5s ease;
+    z-index: 1000;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+
+
+.man{
+   position: absolute;
+   bottom:0px;
+   right: 80px;
+   width: 550px;
+
+}
+
+header .toggle.active{
+    background: url("../Assets/Images/close.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+}
+
+.content .contentBx{
+    background-color: #141821;
+    position: relative;
+    width: 30%;
+    transition: 0.5s;
+}
